@@ -1,0 +1,19 @@
+<article class="magazine">
+    <div class="image">
+        <img alt="{{magazine.altText}}" ng-src="{{magazine.imageUrl}}" >
+    </div>
+    <div class="content">
+        <h1 class="title">{{magazine.title}}</h1>
+        <p class="rating">{{magazine.rating}}</p>
+        <p class="location">
+            <span class="address1">{{magazine.location.address1}}</span>
+            <br/>
+            <span class="city">{{magazine.location.city}}</span>,
+            <span class="state">{{magazine.location.state}}</span>
+        </p>
+    </div>
+    <ul class="mag-footer">
+        <li><a href="#/share"><span>Share</span></a></li>
+        <li><a href="#/explore"><span>explore</span></a></li>
+    </ul>
+</article>

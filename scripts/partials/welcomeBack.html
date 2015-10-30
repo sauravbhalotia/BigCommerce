@@ -1,0 +1,13 @@
+<div class="welcomeBack" ng-if="wbCtrl.toShow">
+    <h1 class="title">{{wbCtrl.title}}</h1>
+    <p>
+        <span>Its been a while.</span>
+        <br/>
+        <span>Read any new books lately?</span>
+    </p>
+    <ul class="wb-footer">
+        <li><a href="#" ng-click="wbCtrl.toShow = !wbCtrl.toShow"><span>No</span></a></li>
+        <li><a href="#" ng-click="wbCtrl.showModalOnButtonClick()"><span>Yes</span></a></li>
+    </ul>
+    <modal ng-show="{{wbCtrl.showModal}}" ng-controller="modalController as modCtrl"></modal>
+</div>

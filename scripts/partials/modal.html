@@ -1,0 +1,38 @@
+<article class="overlay">
+    <form class="modalcontainer" name="addNewItem" ng-submit="modCtrl.formSave()" novalidate>
+        <button ng-click="modCtrl.closeModal()">X</button>
+        <h1>What you read recently?</h1>
+
+        <div class="group">
+            <label for="name">{{modCtrl.label.title}}: </label>
+            <input id="name" type="text" ng-model="modCtrl.newReadItem.title" required check>
+            <p>
+                <span class="invalid" ng-if="addNewItem.name.$error.check">Item already Present.</span>
+                <span class="invalid" ng-if="addNewItem.name.$error.required">required</span>
+            </p>
+        </div>
+        <div class="group">
+            <label for="author">{{modCtrl.label.author}}: </label>
+            <input id="author" type="text" ng-model="modCtrl.newReadItem.author" required>
+            <p>
+                <span class="invalid" ng-if="addNewItem.author.$error.required">required</span>
+            </p>
+        </div>
+        <div class="group">
+            <label for="imageLink">{{modCtrl.label.imageUrl}}: </label>
+            <input id="imageLink" type="link" ng-model="modCtrl.newReadItem.imageUrl">
+        </div>
+        <div class="group">
+            <label for="category">{{modCtrl.label.category}}: </label>
+            <select id="category" ng-model="modCtrl.newReadItem.category" required>
+                <option ng-repeat="op in modCtrl.options"  value="{{op}}">{{op}}</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <button type="submit" class="save" title="Save" ng-disabled="addNewItem.$invalid"><span>Save</span></button>
+            <button class="reset" ng-click="modCtrl.formReset()" title="Reset" ><span>Reset</span></button>
+        </div>
+
+    </form>
+</article>

@@ -1,0 +1,351 @@
+* {
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddd;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 840px;
+    margin: 0 auto;
+}
+
+header > h1 {
+    background-color: #FF5087;
+    padding: 30px;
+    font-size: 28px;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    font-size: 0;
+    overflow: hidden;
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+header > h1 div {
+    display: none;
+}
+
+nav ul li {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    list-style-type: none;
+    border-right: 1px solid white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.mag-sec {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+}
+
+.magazine,
+.welcomeBack,
+.book {
+    background-color: #fff;
+    margin: 10px;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 0 3px 1px #999;
+}
+
+.welcomeBack {
+    height: 200px;
+}
+
+.book {
+    height: 160px;
+}
+
+.magazine {
+    height: 320px;
+}
+
+.magazine .image> img {
+    height: 160px;
+    width: 100%;
+}
+
+.welcomeBack h1 {
+    color: #FF5087;
+}
+
+.welcomeBack h1,
+.content h1 {
+    font-size: 24px;
+    padding: 20px 10px 0 20px;
+}
+
+.welcomeBack p,
+.content p {
+    font-size: 16px;
+    padding: 10px 10px 0 20px;
+}
+
+.welcomeBack p {
+    color: #000;
+}
+
+.mag-sec .content,
+.book .content p {
+    color: #aaa;
+}
+
+.book .image > img {
+    height: 160px;
+    width: 120px;
+}
+
+.book .content {
+    position: absolute;
+    top: 0px;
+}
+
+.book .content,
+.book ul.article-footer {
+    left: 120px;
+    /*width of image*/
+    right: 0;
+}
+
+.magazine .content h1 {
+    color: #fff;
+    position: absolute;
+    top: 100px;
+}
+
+.magazine .content p.location {
+    color: #000;
+}
+
+.magazine ul.mag-footer,
+.welcomeBack ul.wb-footer {
+    width: 100%;
+}
+
+.magazine ul.mag-footer,
+.welcomeBack ul.wb-footer,
+ul.article-footer {
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #bbb;
+}
+
+.magazine ul.mag-footer li,
+.welcomeBack ul.wb-footer li,
+ul.article-footer li {
+    display: inline-block;
+    padding: 20px 0 20px 20px;
+}
+
+.magazine ul li:last-child a,
+.welcomeBack ul li:last-child a,
+.book ul li:last-child a {
+    color: orange;
+}
+
+.magazine ul li a,
+.welcomeBack ul li a,
+.book ul li a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* add to body */
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.overlay {
+    top: 0px;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay form.modalcontainer {
+    width: 450px;
+    height: 300px;
+    background-color: #eee;
+    box-shadow: 0 0 10px 2px #000;
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -225px;
+    margin-top: -150px;
+}
+
+.overlay form.modalcontainer button {
+    float: right;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+}
+
+.overlay h1 {
+    margin-bottom: 30px;
+}
+.group {
+    margin: 3px;
+}
+.group p {
+    display: inline-block;
+    margin-left: 130px;
+    padding: 2px;
+}
+
+.group label{
+    width: 100px;
+    display: inline-block;
+    margin-left: 25px;
+    line-height: 25px;
+}
+
+.overlay select,
+.overlay input{
+    width: 300px;
+    padding: 5px;
+    font-size: medium;
+}
+
+.overlay div.group button{
+    text-transform: uppercase;
+    margin: 20px;
+    padding: 6px 15px 6px 15px;
+    border-radius: 2px;
+    color: white;
+}
+.disabled {
+    opacity: .05;
+}
+.overlay div.group .errorText {
+    color: red;
+    display: none;
+}
+
+.overlay div.group .reset {
+    background-color: #d9534f;
+}
+
+.overlay div.group .save {
+    background-color: #5cb85c;
+}
+
+.overlay select#category{
+    width: 313px;
+}
+
+button[disabled="disabled"] {
+    opacity: .5;
+}
+/* Smartphones & Tablets (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 324px) and (max-device-width: 768px) {
+    .container {
+        width: auto;
+    }
+    .magazine,
+    .welcomeBack,
+    .book {
+        max-width: 760px;
+    }
+
+    nav ul {
+        list-style: none;
+        background: #fff;
+        height: 100%;
+        z-index: 11;
+        padding-left: 0;
+        display: none;
+    }
+
+    .overlay,
+    nav ul:after {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .overlay {
+        visibility: hidden;
+        top: 0px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li a {
+        color: #000;
+        display: block;
+        border-bottom: 1px solid #aaa;
+        text-align: left;
+        padding-left: 20px;
+    }
+    nav li:last-child a {
+        border-bottom: none;
+    }
+    nav li a:hover,
+    nav li a:focus {
+        color: #000;
+        background: #ddd;
+    }
+    h1 > div {
+        display: block;
+    }
+/*    body {
+        overflow: hidden;
+    }*/
+
+    header > h1 div .menu,
+    header > h1 div .close {
+        display: block;
+    }
+
+    header > h1 div,
+    header > h1 span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header > h1 span {
+        margin-left: 20px;
+    }
+    .mag-sec {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}
